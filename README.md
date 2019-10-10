@@ -6,13 +6,13 @@ This repository contains code of manifold embedded knowledge transfer (MEKT). ME
     <img src="presentation/diagram.png", width="750">
 </div>
 
-The average BCAs on the four datasets are shown in Table II. All MEKT-based approaches outperformed the baselines. 
+The average BCAs on the four datasets are shown in Table II. All MEKT-based approaches outperform the baselines. 
 
 <div align="center">
     <img src="presentation/bca.png", width="365">
 </div>
 
-The results on STS/MTS tasks above demonstrates the effectiveness of our approach.
+The results on STS/MTS tasks above demonstrate the effectiveness of our approach.
 
 ## Running the code
 The code is MATLAB code works in Windows 10 system.
@@ -27,6 +27,6 @@ Code files introduction:
 
 **demo_ern_mts.m** -- MTS tasks on ERN dataset. The augmented covariance matrix is used here.
 
-**dte_rsvp.m** -- Domain transferability estimation (DTE) to select source domians test on RSVP dataset.
+**dte_rsvp.m** -- Domain transferability estimation (DTE) to select source domains, tested on RSVP dataset.
 
 **MEKT.m** -- It's the implementation of MEKT approach. Please find the specific input/output instructions in the function comments.
