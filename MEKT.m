@@ -15,7 +15,7 @@ function [Zs, Zt] = MEKT(Xs, Xt, Ys, Yt0, options)
     %        alpha: the parameter for P, [2^(-15),2^(-5)],
     %        rho: the parameter for Q, [5,40],
     %        clf: the string for base classifier, 'slda' or 'svm'.
-    % Output: Embeddings, Zs,Zt; Adaptive classifier, f.
+    % Output: Embeddings Zs, Zt.
 
     % Set options
     d = options.d; T = options.T;
@@ -49,7 +49,7 @@ function [Zs, Zt] = MEKT(Xs, Xt, Ys, Yt0, options)
     L = D-W;
     L = [zeros(ms),zeros(mt); zeros(ms),Xt*L*Xt'];
 
-    % Initialize Q: subspace divergence |A-B|_F+|B|_F
+    % Initialize Q: parameter transfer and regularization |B-A|_F+|B|_F
     Q = [eye(ms),-eye(mt);-eye(ms),2*eye(mt)];
 
     % Initialize S: target components perservation
