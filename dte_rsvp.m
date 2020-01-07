@@ -95,7 +95,7 @@ for t=1:N
         end
         Xs=Xs(:,ids); Ys=Ys(ids);
 
-        w=classweight(Ys);
+		w=ones(size(Ys)); w(Ys==1)=sum(Ys==0)/sum(Ys==1);
 
         %% MEKT
         options.d = 10;             % subspace bases 
