@@ -16,7 +16,7 @@ function [Cn,Xn]=centroid_align(x,str)
         tmp_cov(:,:,i)=cov(x(:,:,i)');
     end
 
-    C = mean_covariances(tmp_cov,str);
+    C = mean_covariances(tmp_cov,str);  % should include the covariancetoolbox 
     P = C^(-1/2);
     
     Cn=zeros(size(x,1),size(x,1),size(x,3));
